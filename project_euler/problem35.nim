@@ -23,7 +23,7 @@ proc get_primes(limit: int): seq[bool] =
 
     result = is_prime
 
-let primes = get_primes(limit = 1_000_000)
+let primes = 1_000_000.get_primes
 
 # echo primes[0..20]
 
