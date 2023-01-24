@@ -47,7 +47,7 @@ proc check_circular_prime(num: var int): bool =
     let num_digits = num.intToStr.len
 
     for i in 1..num_digits:
-        var ones = num.euclMod(10)
+        let ones = num.euclMod(10)
         num = ((num / 10)).int  + (10.toFloat.pow(num_digits.toFloat-1) * ones.toFloat).int
 
         if not primes[num]:
